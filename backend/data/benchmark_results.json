@@ -1,0 +1,18 @@
+{
+  "vectors": 50000,
+  "dimensions": 384,
+  "queries": 500,
+  "top_k": 10,
+  "ivf_clusters": 100,
+  "nprobe": 5,
+  "brute_force": {
+    "total_ms": 45903.311699279584,
+    "avg_ms_per_query": 91.80662339855917
+  },
+  "ivf_flat": {
+    "total_ms": 2950.374000123702,
+    "avg_ms_per_query": 5.900748000247404
+  },
+  "speedup": 15.558472145346647,
+  "recall_at_10": 0.9954
+}
