@@ -16,6 +16,16 @@ NeuralVec Studio demonstrates the core mechanics of vector similarity engines wi
 
 ---
 
+## What is Mocked and External Services
+
+To keep the vector database implementation pure and isolated, the following items and behaviors are mocked or pre-generated:
+
+* **Vector Storage Persistence**: Vectors and centroids are stored in-memory using pre-calculated NumPy binary files (`.npy`) rather than an external disk database.
+* **Embeddings Ingestion**: Text embeddings are pre-computed offline using `all-MiniLM-L6-v2` to simulate real-time enterprise document ingestion.
+* **External Databases**: No third-party vector search engines or GPU-accelerated libraries (such as FAISS, Pinecone, or ChromaDB) are used; indexing and distance algorithms are written from scratch.
+
+---
+
 ## Performance Metrics
 
 Evaluation conducted across 500 test queries against a 50,000-vector dataset (Top-K = 10):
@@ -55,7 +65,7 @@ Evaluation conducted across 500 test queries against a 50,000-vector dataset (To
                ▼               ▼
         [ Brute-Force ]   [ IVF-Flat ]
           (Exact Scan)    (K-Means 100)
-
+          
 Repository Setup
 Backend Service
 
